@@ -1,0 +1,25 @@
+{
+    "name": "ewereka/laravel-metable",
+    "description": "Fluent metadata for Eloquent Models, as if it is a property on your model.",
+    "keywords": ["laravel", "meta", "metas", "meta data", "data" , "metadata", "metable", "model", "eloquent", "ewereka"],
+    "authors": [
+        {
+            "name": "Sean Metzgar",
+            "homepage": "https://github.com/seanmetzgar",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "illuminate/support": ">=5.0"
+    },
+    "autoload": {
+        "classmap": [
+        ],
+        "psr-0": {
+            "Ewereka\\Metable\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "license": "MIT"
+}
