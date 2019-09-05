@@ -315,7 +315,7 @@ trait Metable
     public function __get($attr)
     {
         // Check for meta accessor
-        $accessor = camel_case('get_'.$attr.'_meta');
+        $accessor = Str::camel('get_'.$attr.'_meta');
 
         if (method_exists($this, $accessor)) {
             return $this->{$accessor}();
@@ -351,7 +351,7 @@ trait Metable
         }
 
         // if the key has a mutator execute it
-        $mutator = camel_case('set_'.$key.'_meta');
+        $mutator = Str::camel('set_'.$key.'_meta');
 
         if (method_exists($this, $mutator)) {
             $this->{$mutator}($value);
