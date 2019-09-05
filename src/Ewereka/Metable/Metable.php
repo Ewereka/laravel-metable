@@ -5,6 +5,7 @@ namespace Ewereka\Metable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Collection as BaseCollection;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Str;
 
 trait Metable
 {
@@ -336,7 +337,7 @@ trait Metable
     public function __set($key, $value)
     {
         // ignore the trait properties being set.
-        if (starts_with($key, 'meta') || $key == 'query') {
+        if (Str::startsWith($key, 'meta') || $key == 'query') {
             $this->$key = $value;
 
             return;
@@ -385,7 +386,7 @@ trait Metable
     public function __isset($key)
     {
         // trait properties.
-        if (starts_with($key, 'meta') || $key == 'query') {
+        if (Str::startsWith($key, 'meta') || $key == 'query') {
             return isset($this->{$key});
         }
 
