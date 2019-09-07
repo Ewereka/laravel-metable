@@ -18,6 +18,13 @@ class MetaData extends Model
     protected $dataTypes = ['boolean', 'integer', 'double', 'float', 'string', 'NULL'];
 
     /**
+     * Whether or not to utilize created_at / updated_at fields.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
+    /**
      * Whether or not to delete the Data on save.
      *
      * @var bool
